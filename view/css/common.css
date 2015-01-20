@@ -1,0 +1,76 @@
+html, body {
+  font-family: "Microsoft YaHei";
+  background-color: #fafafa;
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+  outline: none;
+}
+.upload-container {
+  width: 800px;
+  height: 400px;
+  margin: 20px auto 0;
+  border: 3px dashed #d1d1d1;
+}
+.content-wrap {
+  padding-top: 220px;
+  text-align: center;
+  background: url("../images/icon.png") 50% 120px no-repeat;
+}
+.button {
+  display: inline-block;
+  width: 180px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  color: #fff;
+  border-radius: 3px;
+  background-color: #1786b0;
+}
+.button:hover {
+  background-color: #4d9da4;
+}
+.ready:before,
+.ready:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.ready:after {
+  clear: both;
+}
+.ready .button {
+  width: 100px;
+  height: 38px;
+  line-height: 38px;
+}
+
+.upload-button {
+  display: none;
+  background-color: #ce4545;
+}
+.upload-button:hover {
+  background-color: #855252;
+}
+.ready .button {
+  float: right;
+  margin-left: 10px;
+}
+.ready .upload-button {
+  display: inline-block;
+}
+.upload-info {
+  margin-top: 30px;
+  color: #aaa;
+}
+.content-wrap.ready {
+  padding: 10px;
+  margin: 10px 15px 0;
+  background: none;
+  border-top: 1px solid #ccc;
+}
+.ready .upload-info {
+  float: left;
+  margin-top: 8px;
+}
