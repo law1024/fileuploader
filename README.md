@@ -8,3 +8,4 @@
 ```golang
 go run server.go 8088
 ```
+浏览器打开 http://127.0.0.1:8088
