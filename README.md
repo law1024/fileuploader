@@ -3,4 +3,8 @@
 
 支持CMD及commonJS规范
 
-## 如何使用？
+## 使用说明
+
+```golang
+go run server.go 8088
+```
