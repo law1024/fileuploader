@@ -256,8 +256,9 @@
 
     constructor: Filer,
     // 分块
-    partition: function(callback) {
-      
+    partition: function() {
+
+      console.info("开始分块");
       var chunkSize = options.chunkSize;
       var chunkCount = Math.ceil(this.size / chunkSize);
 
@@ -424,11 +425,14 @@
           setTimeout(function() {
             //对文件进行分块
             f.partition();
+            _$.each(f.chunks, function(i, chunk) {
+              self.chunkList.push(chunk);
+            });
           });
         }
       });
     },
-
+    //获取分块
     isFileExist: function(f) {
       var identifier = f.getIdentifier(),
           result     = false;
