@@ -23,5 +23,13 @@ func GetIndex(w http.ResponseWriter, r *http.Request) {
 
 //上传接口
 func DoUpload(w http.ResponseWriter, r *http.Request) {
-  fmt.Fprintf(w, "good")
+  //拿到上传的图片
+  r.ParseMultipartForm(10 << 20)
+  file, handler, err := r.FormFile("file")
+  if err != nil {
+    fmt.Println(err)
+    return
+  }
+  defer file.Close()
+  
 }
